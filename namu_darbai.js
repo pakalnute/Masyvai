@@ -1,21 +1,29 @@
 // 1.	Sukurti masyvą (piniginę), kurio ilgis yra atsitiktinis nuo 10 iki 30, o reikšmės atsitiktiniai skaičiai nuo 0 iki 10 (pinigai);
 
-const pinigine1 = [];
-const pinigine2 = [];
-for (let i = 1; i <= 100; i++) {
-    pinigine1.push(rand(10, 30))
-    pinigine2.push(rand(0, 10))
-}
-pinigine1.sort(function(a, b) {
-    return a - b;
-});
-pinigine2.sort(function(a, b) {
-    return a - b;
-});
-console.log(pinigine1, pinigine2);
+/*let pinigine = [];
 
+const ilgis = Math.trunc(Math.random() * (30 - 10) + 10);
+console.log("ilgis: ", ilgis);
+for (let i = 0; i < ilgis; i++) {
+let pinigai = Math.trunc(Math.random() * 11);
+pinigine.push(pinigai);
+}
+console.log("masyvas: ", pinigine);*/
 
 // 2.	Naudojant ciklą apskaičiuoti masyvo iš 1 uždavinio reikšmių (pinigų esančių piniginėje) sumą;
+
+let suma = 0;
+
+let pinigine = [];
+const ilgis = Math.trunc(Math.random() * (30 - 10) + 10);
+console.log("ilgis: ", ilgis);
+for (let i = 0; i < ilgis; i++) {
+let pinigai = Math.trunc(Math.random() * 11);
+pinigine.push(pinigai);
+suma += pinigai;
+}
+console.log("masyvas: ", pinigine);
+console.log("pinigų suma: ", suma);
 
 // 3.	Naudojant ciklą apskaičiuoti masyvo iš 1 uždavinio popierinių pinigų (skaičių didesnių už 2 ) reikšmių sumą;
 
